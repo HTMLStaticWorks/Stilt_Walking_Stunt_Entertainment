@@ -1,0 +1,43 @@
+/* RTL Support */
+html[dir="rtl"] body {
+  text-align: right;
+}
+
+html[dir="rtl"] .navbar-custom .nav-link {
+  margin: 0 0.5rem;
+}
+
+html[dir="rtl"] .section-title::after {
+  left: auto;
+  right: 0;
+}
+
+html[dir="rtl"] .btn-premium::before {
+  left: auto;
+  right: -100%;
+}
+html[dir="rtl"] .btn-premium:hover::before {
+  right: 100%;
+}
+
+html[dir="rtl"] .footer-link:hover {
+  transform: translateX(-5px);
+}
+
+html[dir="rtl"] .ms-auto {
+  margin-left: 0 !important;
+  margin-right: auto !important;
+}
+html[dir="rtl"] .me-auto {
+  margin-right: 0 !important;
+  margin-left: auto !important;
+}
+html[dir="rtl"] .ps-0 {
+  padding-right: 0 !important;
+}
+html[dir="rtl"] .pe-0 {
+  padding-left: 0 !important;
+}
+html[dir="rtl"] .text-md-start {
+  text-align: right !important;
+}

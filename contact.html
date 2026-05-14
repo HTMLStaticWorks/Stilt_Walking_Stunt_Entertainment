@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stilt & Stunt | Book an Act</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+</head>
+<body class="dark-mode">
+
+        <!-- Navbar -->
+    <nav class="navbar navbar-expand-xl fixed-top navbar-custom py-3">
+        <div class="container">
+            <a class="navbar-brand text-uppercase fw-bold d-flex align-items-center" href="index.html" style="font-family: var(--font-heading); font-size: 1.5rem; letter-spacing: 2px;">
+                <i class="fa-solid fa-wand-magic-sparkles me-2" style="color: var(--electric-gold);"></i>
+                <span style="color: var(--electric-gold);">Stilt</span>&Stunt
+            </a>
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="fa-solid fa-bars fs-3" style="color: var(--electric-gold);"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="home2.html">Home 2</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pricing.html">Packages</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                    <li class="nav-item ms-lg-3 my-2 my-lg-0">
+                        <a href="login.html" class="btn btn-premium btn-sm w-100">Login</a>
+                    </li>
+                    <li class="nav-item ms-lg-3 d-flex gap-3 mt-3 mt-lg-0 align-items-center">
+                        <a href="#" id="theme-toggle" class="nav-link p-0 fs-5"><i class="fa-solid fa-moon"></i></a>
+                        <a href="#" id="rtl-toggle" class="nav-link p-0 fw-bold" style="font-size: 0.9rem;">RTL</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <header class="position-relative d-flex align-items-center justify-content-center" style="height: 50vh; background: url('https://images.unsplash.com/photo-1531058020387-3be344556be6?w=1920&q=80') no-repeat center center/cover; margin-top: 76px;">
+        <div class="hero-overlay" style="background: rgba(0,0,0,0.7);"></div>
+        <div class="container position-relative z-2 text-center text-white fade-up">
+            <h1 class="hero-title mb-3" style="font-size: clamp(2.5rem, 5vw, 4rem);">Contact Us</h1>
+            <p class="lead text-white-50">Secure our performers for your next event.</p>
+        </div>
+    </header>
+
+    <main class="section-padding bg-dark">
+        <div class="container position-relative z-2">
+            <div class="row g-5">
+                <div class="col-lg-7 fade-up">
+                    <div class="glass-card">
+                        <div class="text-center mb-4">
+                            <h2 class="hero-title" style="font-size: 2.5rem;">Booking Inquiry</h2>
+                            <p class="text-white-50">Provide details about your upcoming event to get a custom quote.</p>
+                        </div>
+                        
+                        <form>
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <label class="form-label text-white-50 small">Full Name</label>
+                                    <input type="text" class="form-control bg-transparent text-white border-secondary shadow-none" placeholder="John Doe">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label text-white-50 small">Email Address</label>
+                                    <input type="email" class="form-control bg-transparent text-white border-secondary shadow-none" placeholder="john@company.com">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label text-white-50 small">Event Type</label>
+                                    <select class="form-select bg-dark text-white border-secondary shadow-none">
+                                        <option selected>Select Event Type...</option>
+                                        <option value="corporate">Corporate Event</option>
+                                        <option value="wedding">Luxury Wedding</option>
+                                        <option value="festival">Music Festival</option>
+                                        <option value="nightclub">Nightclub / VIP</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label text-white-50 small">Event Date</label>
+                                    <input type="date" class="form-control bg-transparent text-white border-secondary shadow-none" style="color-scheme: dark;">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label text-white-50 small">Number of Performers</label>
+                                    <input type="number" class="form-control bg-transparent text-white border-secondary shadow-none" placeholder="e.g. 4">
+                                </div>
+                                <div class="col-md-6">
+                                    <label class="form-label text-white-50 small">Budget Range</label>
+                                    <select class="form-select bg-dark text-white border-secondary shadow-none">
+                                        <option selected>Select Budget...</option>
+                                        <option value="1500">$1,500 - $3,000</option>
+                                        <option value="3000">$3,000 - $5,000</option>
+                                        <option value="5000">$5,000 - $10,000</option>
+                                        <option value="10000">$10,000+</option>
+                                    </select>
+                                </div>
+                                <div class="col-12">
+                                    <label class="form-label text-white-50 small">Event Details / Inspiration</label>
+                                    <textarea class="form-control bg-transparent text-white border-secondary shadow-none" rows="4" placeholder="Tell us about your theme, venue, and specific acts you are interested in..."></textarea>
+                                </div>
+                                <div class="col-12 text-center mt-4">
+                                    <button type="submit" class="btn btn-premium px-5 py-3 w-100">Request Custom Quote</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="col-lg-5 fade-up" style="transition-delay: 0.2s;">
+                    <div class="glass-card h-100 d-flex flex-column">
+                        <h3 class="mb-4 text-white" style="font-family: var(--font-heading);">Get in Touch</h3>
+                        
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="rounded-circle bg-dark d-flex justify-content-center align-items-center me-3 flex-shrink-0" style="width: 50px; height: 50px;">
+                                <i class="fa-solid fa-envelope text-white"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-1 text-white">Email Us</h6>
+                                <p class="text-white-50 small mb-0">bookings@stiltandstunt.com</p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="rounded-circle bg-dark d-flex justify-content-center align-items-center me-3 flex-shrink-0" style="width: 50px; height: 50px;">
+                                <i class="fa-solid fa-phone text-white"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-1 text-white">Call Us</h6>
+                                <p class="text-white-50 small mb-0">+1 (800) 123-4567</p>
+                            </div>
+                        </div>
+
+                        <div class="d-flex align-items-center mb-4">
+                            <div class="rounded-circle bg-dark d-flex justify-content-center align-items-center me-3 flex-shrink-0" style="width: 50px; height: 50px;">
+                                <i class="fa-solid fa-location-dot text-white"></i>
+                            </div>
+                            <div>
+                                <h6 class="mb-1 text-white">Headquarters</h6>
+                                <p class="text-white-50 small mb-0">123 Entertainment Blvd, Las Vegas, NV</p>
+                            </div>
+                        </div>
+
+                        <!-- Social Icons -->
+                        <h6 class="text-white mb-3 text-uppercase mt-2" style="letter-spacing: 1px;">Follow Us</h6>
+                        <div class="d-flex gap-3 mb-4">
+                            <a href="#" class="btn btn-outline-premium rounded-circle d-flex justify-content-center align-items-center p-0" style="width: 45px; height: 45px;"><i class="fa-brands fa-instagram fs-5"></i></a>
+                            <a href="#" class="btn btn-outline-premium rounded-circle d-flex justify-content-center align-items-center p-0" style="width: 45px; height: 45px;"><i class="fa-brands fa-tiktok fs-5"></i></a>
+                            <a href="#" class="btn btn-outline-premium rounded-circle d-flex justify-content-center align-items-center p-0" style="width: 45px; height: 45px;"><i class="fa-brands fa-youtube fs-5"></i></a>
+                            <a href="#" class="btn btn-outline-premium rounded-circle d-flex justify-content-center align-items-center p-0" style="width: 45px; height: 45px;"><i class="fa-brands fa-facebook-f fs-5"></i></a>
+                        </div>
+
+                        <!-- Map -->
+                        <div class="flex-grow-1 rounded overflow-hidden" style="min-height: 250px; border: 1px solid rgba(255,255,255,0.1);">
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d103134.42173160754!2d-115.22852261642878!3d36.12520698188176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80beb782a4f57dd1%3A0x3accd5e6d5b379a3!2sLas%20Vegas%2C%20NV!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <a class="navbar-brand text-uppercase fw-bold d-inline-block mb-4" href="index.html" style="font-family: var(--font-heading); font-size: 1.5rem; letter-spacing: 2px; color: white !important;">
+                        <i class="fa-solid fa-wand-magic-sparkles me-2" style="color: var(--electric-gold);"></i>
+                        <span style="color: var(--electric-gold);">Stilt</span>&Stunt
+                    </a>
+                    <p class="text-white-50 mb-4">The premier agency for visually spectacular stilt walkers, fire artists, and acrobatic performers.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="btn btn-outline-light rounded-circle p-2" style="width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center;"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="btn btn-outline-light rounded-circle p-2" style="width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center;"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#" class="btn btn-outline-light rounded-circle p-2" style="width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center;"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="footer-title">Explore</h5>
+                    <a href="#" class="footer-link">Home</a>
+                    <a href="#" class="footer-link">Performers</a>
+                    <a href="#" class="footer-link">Packages</a>
+                    <a href="#" class="footer-link">Costumes</a>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="footer-title">Agency</h5>
+                    <a href="#" class="footer-link">About Us</a>
+                    <a href="#" class="footer-link">Safety & Insurance</a>
+                    <a href="#" class="footer-link">Careers</a>
+                    <a href="#" class="footer-link">Contact</a>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <h5 class="footer-title">Newsletter</h5>
+                    <p class="text-white-50 small mb-3">Subscribe for the latest acts and inspiration.</p>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control bg-transparent text-white border-secondary shadow-none" placeholder="Email Address">
+                        <button class="btn btn-premium" type="button">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-top border-secondary mt-5 pt-4 text-center text-white-50 small">
+                <p class="mb-0">&copy; 2026 Stilt & Stunt Entertainment. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

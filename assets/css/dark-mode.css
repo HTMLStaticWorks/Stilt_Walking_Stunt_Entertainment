@@ -1,0 +1,47 @@
+/* Dark Mode Override */
+body.dark-mode {
+  background-color: var(--primary-black);
+  color: var(--platinum-white);
+}
+
+body.dark-mode .navbar-custom {
+  background: rgba(7, 7, 7, 0.8);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .navbar-custom .nav-link {
+  color: var(--platinum-white);
+}
+
+body.dark-mode .navbar-custom .navbar-brand {
+  color: var(--platinum-white);
+}
+
+body.dark-mode .navbar-custom .navbar-toggler i {
+  color: var(--electric-gold) !important;
+}
+
+body.dark-mode .glass-card {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+body.dark-mode .glass-card:hover {
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .btn-outline-premium {
+  color: var(--platinum-white);
+}
+body.dark-mode .btn-outline-premium:hover {
+  color: var(--primary-black);
+}
+
+body.dark-mode .text-muted {
+  color: #a0a0a0 !important;
+}
+
+/* Specific elements background override */
+body.dark-mode .bg-light {
+  background-color: var(--secondary-black) !important;
+}
