@@ -37,6 +37,20 @@ body.dark-mode .btn-outline-premium:hover {
   color: var(--primary-black);
 }
 
+/* Keep home hero and navbar controls readable on hover in dark mode */
+body.dark-mode .hero-section .btn-premium,
+body.dark-mode .hero-section .btn-premium:hover,
+body.dark-mode .navbar-custom .btn-premium,
+body.dark-mode .navbar-custom .btn-premium:hover {
+  background: var(--electric-gold) !important;
+  color: var(--primary-black) !important;
+}
+
+body.dark-mode .navbar-custom .nav-link:hover,
+body.dark-mode .navbar-custom .nav-link:focus {
+  color: var(--electric-gold) !important;
+}
+
 body.dark-mode .text-muted {
   color: #a0a0a0 !important;
 }

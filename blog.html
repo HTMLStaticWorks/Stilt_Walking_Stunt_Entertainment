@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,6 +9,22 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dark-mode.css">
     <link rel="stylesheet" href="assets/css/rtl.css">
+    <style>
+        @media (max-width: 768px) {
+            .blog-hero-title-fix {
+                overflow-wrap: normal !important;
+                word-break: normal !important;
+                hyphens: none !important;
+            }
+        }
+
+        @media (max-width: 1024px) {
+            .blog-card-center-fix .badge {
+                align-self: center !important;
+            }
+        }
+    </style>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23070707'/%3E%3Cpath d='M14 42L28 18H38L24 42Z' fill='%23f5c542'/%3E%3Crect x='39' y='18' width='11' height='24' rx='2' fill='%23f5c542'/%3E%3C/svg%3E">
 </head>
 <body class="dark-mode">
 
@@ -47,14 +63,14 @@
     <header class="position-relative d-flex align-items-center justify-content-center" style="height: 40vh; background: var(--secondary-black); margin-top: 76px;">
         <div class="glow-orb orb-1" style="background: var(--royal-crimson);"></div>
         <div class="container position-relative z-2 text-center text-white fade-up">
-            <h1 class="hero-title mb-3">Event Inspiration</h1>
+            <h1 class="hero-title mb-3 blog-hero-title-fix">Event Inspiration</h1>
             <p class="lead text-white-50">Insights, behind-the-scenes, and industry trends.</p>
         </div>
     </header>
 
     <main>
         <!-- Blog Grid -->
-        <section class="section-padding bg-light">
+        <section class="section-padding bg-light blog-card-center-fix">
             <div class="container">
                 <div class="row g-4">
                     <!-- Article 1 -->
@@ -84,7 +100,7 @@
                     <!-- Article 3 -->
                     <div class="col-md-6 col-lg-4 fade-up" style="transition-delay: 0.2s;">
                         <div class="glass-card h-100 d-flex flex-column p-0 overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1542382156909-9ae37b3f56fd?w=800&q=80" alt="Blog Image" class="img-fluid" style="height: 200px; object-fit: cover;">
+                            <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800&q=80" alt="Blog Image" class="img-fluid" style="height: 200px; object-fit: cover;">
                             <div class="p-4 d-flex flex-column flex-grow-1">
                                 <span class="badge mb-2 align-self-start" style="background: rgba(0, 229, 255, 0.2); color: var(--led-cyan);">Technology</span>
                                 <h4 class="mb-3">Future of LED Entertainment</h4>
@@ -225,3 +241,4 @@
     <script src="assets/js/main.js"></script>
 </body>
 </html>
+

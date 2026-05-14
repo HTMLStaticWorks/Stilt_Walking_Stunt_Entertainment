@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,6 +9,59 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dark-mode.css">
     <link rel="stylesheet" href="assets/css/rtl.css">
+    <style>
+        .auth-divider-badge {
+            background: rgba(7, 7, 7, 0.72) !important;
+            color: rgba(255, 255, 255, 0.85) !important;
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 999px;
+        }
+
+        .auth-social-btn {
+            color: #ffffff !important;
+            border-color: rgba(255, 255, 255, 0.75) !important;
+            background: rgba(255, 255, 255, 0.02) !important;
+        }
+
+        .auth-social-btn i {
+            color: #ffffff !important;
+        }
+
+        body:not(.dark-mode) .auth-divider-badge {
+            background: rgba(255, 255, 255, 0.92) !important;
+            color: rgba(17, 17, 17, 0.72) !important;
+            border-color: rgba(17, 17, 17, 0.14);
+        }
+
+        body:not(.dark-mode) .auth-social-btn {
+            color: #111111 !important;
+            border-color: rgba(17, 17, 17, 0.3) !important;
+            background: rgba(255, 255, 255, 0.55) !important;
+        }
+
+        body:not(.dark-mode) .auth-social-btn i {
+            color: #111111 !important;
+        }
+
+        @media (max-width: 1024px) {
+            .auth-meta-row {
+                width: 100% !important;
+                justify-content: space-between !important;
+                align-items: center !important;
+                gap: 0.5rem !important;
+                flex-wrap: wrap !important;
+            }
+
+            .auth-meta-row .form-check {
+                margin: 0 !important;
+            }
+
+            .auth-meta-row a {
+                margin-left: auto !important;
+            }
+        }
+    </style>
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23070707'/%3E%3Cpath d='M14 42L28 18H38L24 42Z' fill='%23f5c542'/%3E%3Crect x='39' y='18' width='11' height='24' rx='2' fill='%23f5c542'/%3E%3C/svg%3E">
 </head>
 <body class="dark-mode hero-section" style="background: url('https://images.unsplash.com/photo-1549488344-1f9b8d2bd1f3?w=1920&q=80') no-repeat center center/cover;">
 
@@ -40,22 +93,26 @@
                             <input type="email" class="form-control bg-transparent text-white border-secondary shadow-none" placeholder="name@example.com">
                         </div>
                         <div class="mb-4 text-start position-relative">
-                            <div class="d-flex justify-content-between">
-                                <label class="form-label text-white-50 small">Password</label>
-                                <a href="#" class="text-decoration-none small" style="color: var(--electric-gold);">Forgot?</a>
+                            <label class="form-label text-white-50 small">Password</label>
+                            <input type="password" class="form-control bg-transparent text-white border-secondary shadow-none" placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢">
+                            <div class="d-flex justify-content-between align-items-center mt-2 auth-meta-row">
+                                <div class="form-check m-0">
+                                    <input class="form-check-input bg-transparent border-secondary shadow-none" type="checkbox" id="rememberMe">
+                                    <label class="form-check-label text-white-50 small" for="rememberMe">Remember me</label>
+                                </div>
+                                <a href="#" class="text-decoration-none small" style="color: var(--electric-gold);">Forgot Password?</a>
                             </div>
-                            <input type="password" class="form-control bg-transparent text-white border-secondary shadow-none" placeholder="••••••••">
                         </div>
                         <button type="submit" class="btn btn-premium w-100 mb-4 py-2">Sign In</button>
                         
                         <div class="position-relative mb-4">
                             <hr class="border-secondary">
-                            <span class="position-absolute top-50 start-50 translate-middle px-2 small text-white-50" style="background: var(--primary-black);">OR</span>
+                            <span class="position-absolute top-50 start-50 translate-middle px-2 small text-white-50 auth-divider-badge">OR</span>
                         </div>
                         
                         <div class="d-flex gap-2 justify-content-center mb-4">
-                            <button type="button" class="btn btn-outline-light w-100"><i class="fa-brands fa-google me-2"></i> Google</button>
-                            <button type="button" class="btn btn-outline-light w-100"><i class="fa-brands fa-apple me-2"></i> Apple</button>
+                            <button type="button" class="btn btn-outline-light w-100 auth-social-btn"><i class="fa-brands fa-google me-2"></i> Google</button>
+                            <button type="button" class="btn btn-outline-light w-100 auth-social-btn"><i class="fa-brands fa-apple me-2"></i> Apple</button>
                         </div>
                         
                         <p class="text-white-50 small mb-0">Don't have an account? <a href="register.html" class="text-decoration-none fw-bold" style="color: var(--electric-gold);">Register</a></p>
@@ -70,3 +127,4 @@
     <script src="assets/js/main.js"></script>
 </body>
 </html>
+

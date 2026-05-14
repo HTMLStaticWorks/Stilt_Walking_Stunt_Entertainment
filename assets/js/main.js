@@ -7,10 +7,13 @@ document.addEventListener('DOMContentLoaded', () => {
   if (!localStorage.getItem('theme')) {
     localStorage.setItem('theme', 'dark');
   }
-  
+
   if (localStorage.getItem('theme') === 'dark') {
     body.classList.add('dark-mode');
     if (themeToggle) themeToggle.innerHTML = '<i class="fa-solid fa-sun"></i>';
+  } else {
+    body.classList.remove('dark-mode');
+    if (themeToggle) themeToggle.innerHTML = '<i class="fa-solid fa-moon"></i>';
   }
 
   if (themeToggle) {
