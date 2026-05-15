@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -233,6 +233,17 @@
                 }
                 .custom-accordion .accordion-button:not(.collapsed)::after {
                     filter: invert(0.8) sepia(1) saturate(5) hue-rotate(1deg); /* Makes it yellowish */
+                }
+                /* Light mode normal format fixes */
+                body:not(.dark-mode) .custom-accordion .accordion-button:not(.collapsed) {
+                    color: #000 !important;
+                    background: transparent !important;
+                }
+                body:not(.dark-mode) .custom-accordion .accordion-button:not(.collapsed)::after {
+                    filter: invert(0) !important;
+                }
+                body:not(.dark-mode) .custom-accordion .accordion-button::after {
+                    filter: invert(0);
                 }
             </style>
         </section>
