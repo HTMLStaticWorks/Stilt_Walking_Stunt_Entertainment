@@ -43,6 +43,15 @@
             color: #111111 !important;
         }
 
+        .auth-link {
+            color: var(--electric-gold) !important;
+        }
+
+        body:not(.dark-mode) .auth-link {
+            color: #b58900 !important; /* Darker gold for light mode */
+            font-weight: bold;
+        }
+
         @media (max-width: 1024px) {
             .auth-meta-row {
                 width: 100% !important;
@@ -71,8 +80,8 @@
     <!-- Top Nav Minimal -->
     <nav class="navbar navbar-expand-lg fixed-top py-3" style="z-index: 10;">
         <div class="container d-flex justify-content-end gap-3">
-            <a href="#" id="theme-toggle" class="nav-link p-0 fs-5 text-white"><i class="fa-solid fa-moon"></i></a>
-            <a href="#" id="rtl-toggle" class="nav-link p-0 fw-bold text-white" style="font-size: 0.9rem;">RTL</a>
+            <a href="#" id="theme-toggle" class="nav-link p-0 fs-5"><i class="fa-solid fa-moon"></i></a>
+            <a href="#" id="rtl-toggle" class="nav-link p-0 fw-bold" style="font-size: 0.9rem;">RTL</a>
         </div>
     </nav>
 
@@ -85,29 +94,29 @@
                         <span style="color: var(--electric-gold);">Stilt</span>&Stunt
                     </a>
                     <h2 class="mb-2" style="font-family: var(--font-heading);">Welcome Back</h2>
-                    <p class="text-white-50 mb-4 small">Sign in to your client dashboard.</p>
+                    <p class="text-muted mb-4 small">Sign in to your client dashboard.</p>
                     
                     <form>
                         <div class="mb-3 text-start">
-                            <label class="form-label text-white-50 small">Email Address</label>
-                            <input type="email" class="form-control bg-transparent text-white border-secondary shadow-none" placeholder="name@example.com">
+                            <label class="form-label text-muted small">Email Address</label>
+                            <input type="email" class="form-control bg-transparent border-secondary shadow-none" placeholder="name@example.com">
                         </div>
                         <div class="mb-4 text-start position-relative">
-                            <label class="form-label text-white-50 small">Password</label>
-                            <input type="password" class="form-control bg-transparent text-white border-secondary shadow-none" placeholder="********">
+                            <label class="form-label text-muted small">Password</label>
+                            <input type="password" class="form-control bg-transparent border-secondary shadow-none" placeholder="********">
                             <div class="d-flex justify-content-between align-items-center mt-2 auth-meta-row">
                                 <div class="form-check m-0">
                                     <input class="form-check-input bg-transparent border-secondary shadow-none" type="checkbox" id="rememberMe">
-                                    <label class="form-check-label text-white-50 small" for="rememberMe">Remember me</label>
+                                    <label class="form-check-label text-muted small" for="rememberMe">Remember me</label>
                                 </div>
-                                <a href="#" class="text-decoration-none small" style="color: var(--electric-gold);">Forgot Password?</a>
+                                <a href="#" class="text-decoration-none small auth-link">Forgot Password?</a>
                             </div>
                         </div>
                         <button type="submit" class="btn btn-premium w-100 mb-4 py-2">Sign In</button>
                         
                         <div class="position-relative mb-4">
                             <hr class="border-secondary">
-                            <span class="position-absolute top-50 start-50 translate-middle px-2 small text-white-50 auth-divider-badge">OR</span>
+                            <span class="position-absolute top-50 start-50 translate-middle px-2 small text-muted auth-divider-badge">OR</span>
                         </div>
                         
                         <div class="d-flex gap-2 justify-content-center mb-4">
@@ -115,7 +124,7 @@
                             <button type="button" class="btn btn-outline-light w-100 auth-social-btn"><i class="fa-brands fa-apple me-2"></i> Apple</button>
                         </div>
                         
-                        <p class="text-white-50 small mb-0">Don't have an account? <a href="register.html" class="text-decoration-none fw-bold" style="color: var(--electric-gold);">Register</a></p>
+                        <p class="text-muted small mb-0">Don't have an account? <a href="register.html" class="text-decoration-none fw-bold auth-link">Register</a></p>
                     </form>
                 </div>
             </div>

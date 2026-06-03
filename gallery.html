@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stilt & Stunt | Gallery</title>
+    <meta name="description" content="View our premium stilt walking, fire shows, and stunt entertainment gallery.">
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/dark-mode.css">
+    <link rel="stylesheet" href="assets/css/rtl.css">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23070707'/%3E%3Cpath d='M14 42L28 18H38L24 42Z' fill='%23f5c542'/%3E%3Crect x='39' y='18' width='11' height='24' rx='2' fill='%23f5c542'/%3E%3C/svg%3E">
+    
+    <style>
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+        }
+        .gallery-item {
+            position: relative;
+            border-radius: 16px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+        .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            display: flex;
+            align-items: flex-end;
+            padding: 1.5rem;
+        }
+        .gallery-item:hover .gallery-overlay {
+            opacity: 1;
+        }
+        .video-card {
+            position: relative;
+            border-radius: 24px;
+            overflow: hidden;
+        }
+        .play-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 80px;
+            height: 80px;
+            background: var(--electric-gold);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: #000;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .play-btn:hover {
+            transform: translate(-50%, -50%) scale(1.1);
+            box-shadow: 0 0 30px rgba(245, 197, 66, 0.6);
+        }
+        .venue-img {
+            border-radius: 24px;
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body class="dark-mode">
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-xl fixed-top navbar-custom py-3">
+        <div class="container">
+            <a class="navbar-brand text-uppercase fw-bold d-flex align-items-center" href="index.html" style="font-family: var(--font-heading); font-size: 1.5rem; letter-spacing: 2px;">
+                <i class="fa-solid fa-wand-magic-sparkles me-2" style="color: var(--electric-gold);"></i>
+                <span style="color: var(--electric-gold);">Stilt</span>&Stunt
+            </a>
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <i class="fa-solid fa-bars fs-3" style="color: var(--electric-gold);"></i>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="home2.html">Home 2</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="pricing.html">Packages</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="gallery.html">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                    <li class="nav-item ms-lg-3 my-2 my-lg-0">
+                        <a href="login.html" class="btn btn-premium btn-sm w-100">Login</a>
+                    </li>
+                    <li class="nav-item ms-lg-3 d-flex gap-3 mt-3 mt-lg-0 align-items-center">
+                        <a href="#" id="theme-toggle" class="nav-link p-0 fs-5"><i class="fa-solid fa-moon"></i></a>
+                        <a href="#" id="rtl-toggle" class="nav-link p-0 fw-bold" style="font-size: 0.9rem;">RTL</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section 1: Hero -->
+    <header class="hero-section" style="background: url('https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=1920&q=80') no-repeat center center/cover;">
+        <div class="hero-overlay"></div>
+        <div class="container hero-content pt-5">
+            <h1 class="hero-title mb-4">Visual Excellence</h1>
+            <p class="lead mx-auto mb-0" style="max-width: 600px;">Explore our gallery of world-class performances, captivating costumes, and unforgettable moments.</p>
+        </div>
+    </header>
+
+    <main>
+        <!-- Section 2: Featured Performances (Grid) -->
+        <section class="section-padding">
+            <div class="container">
+                <div class="text-center mb-5 fade-up">
+                    <h2 class="section-title">Stage Brilliance</h2>
+                    <p class="text-muted mx-auto" style="max-width: 600px;">A collection of our most breathtaking acts across the globe.</p>
+                </div>
+                
+                <div class="gallery-grid fade-up">
+                    <div class="gallery-item">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRAW1e1ptVVjklAbzUxDpu-U3jAbOkIFxbb6g&s" alt="LED Performance">
+                        <div class="gallery-overlay">
+                            <div>
+                                <h4 class="text-white mb-1" style="font-family: var(--font-heading);">Neon Symphony</h4>
+                                <p class="text-white-50 small mb-0">LED Light Show</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://images.pexels.com/photos/14493492/pexels-photo-14493492.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="Fire Performance">
+                        <div class="gallery-overlay">
+                            <div>
+                                <h4 class="text-white mb-1" style="font-family: var(--font-heading);">Inferno Dance</h4>
+                                <p class="text-white-50 small mb-0">Fire Spinning</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQSuM9cxxeTfQwMspfuVFekFn1mvPqDcnaMZA&s" alt="Aerial Acrobatics">
+                        <div class="gallery-overlay">
+                            <div>
+                                <h4 class="text-white mb-1" style="font-family: var(--font-heading);">Gravity Defied</h4>
+                                <p class="text-white-50 small mb-0">Aerial Silks</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRm3HRoGw0LnfCpT7FEXTWEiJkj2MqhdPVkPQ&s" alt="Stilt Walker">
+                        <div class="gallery-overlay">
+                            <div>
+                                <h4 class="text-white mb-1" style="font-family: var(--font-heading);">Towering Elegance</h4>
+                                <p class="text-white-50 small mb-0">Luxury Stilt Walking</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://www.photoshelter.com/img-get/I00007zYpgQoWQ1g/s/600/" alt="Festival Act">
+                        <div class="gallery-overlay">
+                            <div>
+                                <h4 class="text-white mb-1" style="font-family: var(--font-heading);">Festival Pulse</h4>
+                                <p class="text-white-50 small mb-0">Main Stage Act</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTFgXESe5jsSeO6UVxzu6-rOaJA5547L1FrCA&s" alt="Cirque Show">
+                        <div class="gallery-overlay">
+                            <div>
+                                <h4 class="text-white mb-1" style="font-family: var(--font-heading);">Cirque Magic</h4>
+                                <p class="text-white-50 small mb-0">Acrobatics</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Video Showcase -->
+        <section class="section-padding" style="background: var(--primary-black); color: white; position: relative;">
+            <div class="glow-orb orb-1" style="background: var(--neon-purple); opacity: 0.15; top: -10%; right: 0;"></div>
+            <div class="container position-relative z-2">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-5 fade-up">
+                        <h2 class="section-title text-white">Action Reels</h2>
+                        <p class="text-white-50 mb-4">Experience the adrenaline and artistry of our live performances through our high-definition showcase reels.</p>
+                        <ul class="list-unstyled text-white-50 mb-4">
+                            <li class="mb-3"><i class="fa-solid fa-check text-warning me-2"></i> Professional 4K footage</li>
+                            <li class="mb-3"><i class="fa-solid fa-check text-warning me-2"></i> Multiple camera angles</li>
+                            <li class="mb-3"><i class="fa-solid fa-check text-warning me-2"></i> Behind-the-scenes clips</li>
+                        </ul>
+                        <a href="#" class="btn btn-premium">Subscribe to YouTube</a>
+                    </div>
+                    <div class="col-lg-7 fade-up" style="transition-delay: 0.1s;">
+                        <div class="video-card glass-card p-2" style="background: rgba(255,255,255,0.03);">
+                            <div class="position-relative">
+                                <img src="https://thumbs.dreamstime.com/b/beautiful-shamanic-woman-dancing-fire-beautiful-shamanic-woman-dancing-fire-226015258.jpg" class="w-100 object-fit-cover" style="border-radius: 20px; height: 400px;" alt="Action Reel Video Thumbnail">
+                                <div class="play-btn">
+                                    <i class="fa-solid fa-play ms-1"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Behind the Scenes -->
+        <section class="section-padding bg-light">
+            <div class="container">
+                <div class="text-center mb-5 fade-up">
+                    <h2 class="section-title">Behind The Magic</h2>
+                    <p class="text-muted mx-auto" style="max-width: 600px;">The preparation, costumes, and makeup that go into every flawless performance.</p>
+                </div>
+                
+                <div class="row g-4">
+                    <div class="col-md-4 fade-up">
+                        <div class="glass-card p-0 overflow-hidden h-100">
+                            <img src="https://images.unsplash.com/photo-1582711012124-a56cf82307a0?w=600&q=80" class="w-100 h-100 object-fit-cover" style="min-height: 300px;" alt="Makeup Prep">
+                        </div>
+                    </div>
+                    <div class="col-md-8 fade-up" style="transition-delay: 0.1s;">
+                        <div class="glass-card p-4 p-md-5 h-100 d-flex flex-column justify-content-center">
+                            <h3 class="mb-3" style="font-family: var(--font-heading);">Costume Design & Styling</h3>
+                            <p class="text-muted mb-4">Every detail matters. From hand-stitched LED wiring to fire-resistant luxury fabrics, our wardrobe department ensures that our performers look incredible and stay safe.</p>
+                            <div class="row g-3">
+                                <div class="col-6">
+                                    <img src="https://images.pexels.com/photos/36925000/pexels-photo-36925000/free-photo-of-cosplay-portrait-of-young-woman-in-steampunk-fashion.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="w-100 object-fit-cover rounded" style="height: 150px;" alt="Costume detail">
+                                </div>
+                                <div class="col-6">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3SiLAVSpWL4vQ86vzTxBPPDKh4CXix8kIvA&s" class="w-100 object-fit-cover rounded" style="height: 150px;" alt="Prop prep">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 5: Venues & Transformations -->
+        <section class="section-padding position-relative">
+            <div class="container z-2">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6 order-lg-2 fade-up">
+                        <h2 class="section-title">Venue Transformations</h2>
+                        <p class="text-muted mb-4">See how our entertainment acts completely alter the atmosphere of luxury spaces, festivals, and corporate ballrooms.</p>
+                        <div class="d-flex align-items-center gap-3 mb-4">
+                            <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px; background: var(--electric-gold) !important; color: #000 !important;">
+                                <i class="fa-solid fa-hotel fs-5"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-0" style="font-family: var(--font-heading);">Luxury Hotels</h5>
+                                <p class="text-muted small mb-0">Grand entrances & ballroom shows</p>
+                            </div>
+                        </div>
+                        <div class="d-flex align-items-center gap-3">
+                            <div class="bg-primary text-white rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px; background: var(--neon-purple) !important;">
+                                <i class="fa-solid fa-campground fs-5"></i>
+                            </div>
+                            <div>
+                                <h5 class="mb-0" style="font-family: var(--font-heading);">Outdoor Festivals</h5>
+                                <p class="text-muted small mb-0">Mainstage fire & LED performances</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 order-lg-1 fade-up" style="transition-delay: 0.1s;">
+                        <img src="https://greenclaws.co.uk/wp-content/uploads/2022/09/venuetransformation.jpg" class="venue-img" alt="Venue Transformation">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-5">
+                <div class="col-lg-4">
+                    <a class="navbar-brand text-uppercase fw-bold d-inline-block mb-4" href="index.html" style="font-family: var(--font-heading); font-size: 1.5rem; letter-spacing: 2px; color: white !important;">
+                        <i class="fa-solid fa-wand-magic-sparkles me-2" style="color: var(--electric-gold);"></i>
+                        <span style="color: var(--electric-gold);">Stilt</span>&Stunt
+                    </a>
+                    <p class="text-white-50 mb-4">The premier agency for visually spectacular stilt walkers, fire artists, and acrobatic performers.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="btn btn-outline-light rounded-circle p-2" style="width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center;"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="btn btn-outline-light rounded-circle p-2" style="width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center;"><i class="fa-brands fa-tiktok"></i></a>
+                        <a href="#" class="btn btn-outline-light rounded-circle p-2" style="width: 40px; height: 40px; display: inline-flex; align-items: center; justify-content: center;"><i class="fa-brands fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="footer-title">Explore</h5>
+                    <a href="index.html" class="footer-link">Home</a>
+                    <a href="services.html" class="footer-link">Services</a>
+                    <a href="pricing.html" class="footer-link">Packages</a>
+                    <a href="gallery.html" class="footer-link">Gallery</a>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="footer-title">Agency</h5>
+                    <a href="about.html" class="footer-link">About Us</a>
+                    <a href="#" class="footer-link">Safety & Insurance</a>
+                    <a href="#" class="footer-link">Careers</a>
+                    <a href="contact.html" class="footer-link">Contact</a>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <h5 class="footer-title">Newsletter</h5>
+                    <p class="text-white-50 small mb-3">Subscribe for the latest acts and inspiration.</p>
+                    <div class="input-group mb-3">
+                        <input type="email" class="form-control bg-transparent text-white border-secondary shadow-none" placeholder="Email Address">
+                        <button class="btn btn-premium" type="button">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="position-relative mt-5 pt-4">
+                <hr class="border-secondary m-0 position-absolute top-0 start-0 w-100">
+                <div class="text-center text-white-50 small">
+                    <p class="mb-0">&copy; 2026 Stilt & Stunt Entertainment. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

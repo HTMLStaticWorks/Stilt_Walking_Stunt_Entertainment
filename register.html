@@ -42,6 +42,15 @@
         body:not(.dark-mode) .auth-social-btn i {
             color: #111111 !important;
         }
+
+        .auth-link {
+            color: var(--electric-gold) !important;
+        }
+
+        body:not(.dark-mode) .auth-link {
+            color: #b58900 !important; /* Darker gold for light mode */
+            font-weight: bold;
+        }
     </style>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23070707'/%3E%3Cpath d='M14 42L28 18H38L24 42Z' fill='%23f5c542'/%3E%3Crect x='39' y='18' width='11' height='24' rx='2' fill='%23f5c542'/%3E%3C/svg%3E">
 </head>
@@ -53,8 +62,8 @@
     <!-- Top Nav Minimal -->
     <nav class="navbar navbar-expand-lg fixed-top py-3" style="z-index: 10;">
         <div class="container d-flex justify-content-end gap-3">
-            <a href="#" id="theme-toggle" class="nav-link p-0 fs-5 text-white"><i class="fa-solid fa-moon"></i></a>
-            <a href="#" id="rtl-toggle" class="nav-link p-0 fw-bold text-white" style="font-size: 0.9rem;">RTL</a>
+            <a href="#" id="theme-toggle" class="nav-link p-0 fs-5"><i class="fa-solid fa-moon"></i></a>
+            <a href="#" id="rtl-toggle" class="nav-link p-0 fw-bold" style="font-size: 0.9rem;">RTL</a>
         </div>
     </nav>
 
@@ -68,32 +77,32 @@
                             <span style="color: var(--electric-gold);">Stilt</span>&Stunt
                         </a>
                         <h2 class="mb-2" style="font-family: var(--font-heading);">Create Account</h2>
-                        <p class="text-white-50 mb-4 small">Join to manage bookings and invoices.</p>
+                        <p class="text-muted mb-4 small">Join to manage bookings and invoices.</p>
                     </div>
                     
                     <form>
                         <div class="row g-3">
                             <div class="col-12 text-start">
-                                <label class="form-label text-white-50 small">First Name</label>
-                                <input type="text" class="form-control bg-transparent text-white border-secondary shadow-none" placeholder="John">
+                                <label class="form-label text-muted small">First Name</label>
+                                <input type="text" class="form-control bg-transparent border-secondary shadow-none" placeholder="John">
                             </div>
                             <div class="col-12 text-start">
-                                <label class="form-label text-white-50 small">Last Name</label>
-                                <input type="text" class="form-control bg-transparent text-white border-secondary shadow-none" placeholder="Doe">
+                                <label class="form-label text-muted small">Last Name</label>
+                                <input type="text" class="form-control bg-transparent border-secondary shadow-none" placeholder="Doe">
                             </div>
                             <div class="col-12 text-start">
-                                <label class="form-label text-white-50 small">Email Address</label>
-                                <input type="email" class="form-control bg-transparent text-white border-secondary shadow-none" placeholder="name@example.com">
+                                <label class="form-label text-muted small">Email Address</label>
+                                <input type="email" class="form-control bg-transparent border-secondary shadow-none" placeholder="name@example.com">
                             </div>
                             <div class="col-12 text-start position-relative">
-                                <label class="form-label text-white-50 small">Password</label>
-                                <input type="password" class="form-control bg-transparent text-white border-secondary shadow-none" placeholder="********">
+                                <label class="form-label text-muted small">Password</label>
+                                <input type="password" class="form-control bg-transparent border-secondary shadow-none" placeholder="********">
                             </div>
                             <div class="col-12">
                                 <div class="form-check text-start">
                                     <input class="form-check-input bg-transparent border-secondary shadow-none" type="checkbox" id="terms">
-                                    <label class="form-check-label text-white-50 small" for="terms">
-                                        I agree to the <a href="#" style="color: var(--electric-gold);">Terms of Service</a>
+                                    <label class="form-check-label text-muted small" for="terms">
+                                        I agree to the <a href="#" class="auth-link">Terms of Service</a>
                                     </label>
                                 </div>
                             </div>
@@ -104,7 +113,7 @@
                         
                         <div class="position-relative my-4">
                             <hr class="border-secondary">
-                            <span class="position-absolute top-50 start-50 translate-middle px-2 small text-white-50 auth-divider-badge">OR</span>
+                            <span class="position-absolute top-50 start-50 translate-middle px-2 small text-muted auth-divider-badge">OR</span>
                         </div>
                         
                         <div class="d-flex gap-2 justify-content-center mb-4">
@@ -112,7 +121,7 @@
                             <button type="button" class="btn btn-outline-light w-100 auth-social-btn"><i class="fa-brands fa-facebook me-2"></i> Facebook</button>
                         </div>
                         
-                        <p class="text-center text-white-50 small mb-0">Already have an account? <a href="login.html" class="text-decoration-none fw-bold" style="color: var(--electric-gold);">Sign In</a></p>
+                        <p class="text-center text-muted small mb-0">Already have an account? <a href="login.html" class="text-decoration-none fw-bold auth-link">Sign In</a></p>
                     </form>
                 </div>
             </div>
