@@ -10,6 +10,11 @@
     <link rel="stylesheet" href="assets/css/dark-mode.css">
     <link rel="stylesheet" href="assets/css/rtl.css">
     <style>
+        body:not(.dark-mode) .blog-press-section {
+            background: #f1f1f1 !important;
+            border-top: 1px solid rgba(0, 0, 0, 0.06);
+        }
+
         @media (max-width: 768px) {
             .blog-hero-title-fix {
                 overflow-wrap: normal !important;
@@ -76,7 +81,7 @@
                     <!-- Article 1 -->
                     <div class="col-md-6 col-lg-4 fade-up">
                         <div class="glass-card h-100 d-flex flex-column p-0 overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800&q=80" alt="Blog Image" class="img-fluid" style="height: 200px; object-fit: cover;">
+                            <img src="https://antaagni.com/wp-content/uploads/2017/07/Anta_Agni_Lycopodium_Flame_Effects_Fire_Show_1.jpg" alt="Blog Image" class="img-fluid" style="height: 200px; object-fit: cover;">
                             <div class="p-4 d-flex flex-column flex-grow-1">
                                 <span class="badge mb-2 align-self-start" style="background: rgba(245, 197, 66, 0.2); color: var(--electric-gold);">Event Planning</span>
                                 <h4 class="mb-3">How to Elevate Your Corporate Gala</h4>
@@ -88,7 +93,7 @@
                     <!-- Article 2 -->
                     <div class="col-md-6 col-lg-4 fade-up" style="transition-delay: 0.1s;">
                         <div class="glass-card h-100 d-flex flex-column p-0 overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1549488344-1f9b8d2bd1f3?w=800&q=80" alt="Blog Image" class="img-fluid" style="height: 200px; object-fit: cover;">
+                            <img src="https://media.istockphoto.com/id/1493061638/photo/fire-spinning.jpg?s=612x612&w=0&k=20&c=YYUMCGr5_FBUcg436mMcIfkArQfKxGf6etVmCG7lF7Q=" alt="Blog Image" class="img-fluid" style="height: 200px; object-fit: cover;">
                             <div class="p-4 d-flex flex-column flex-grow-1">
                                 <span class="badge mb-2 align-self-start" style="background: rgba(255, 107, 0, 0.2); color: var(--fire-orange);">Behind the Scenes</span>
                                 <h4 class="mb-3">The Anatomy of a Fire Show</h4>
@@ -136,7 +141,7 @@
         </section>
 
         <!-- Section 2: Press & Media -->
-        <section class="section-padding position-relative" style="background: var(--primary-black); color: white;">
+        <section class="section-padding position-relative blog-press-section" style="background: var(--primary-black); color: white;">
             <div class="glow-orb orb-1" style="background: var(--electric-gold); opacity: 0.1; top: 50%; left: 10%;"></div>
             <div class="container position-relative z-2">
                 <div class="text-center mb-5 fade-up">
@@ -241,4 +246,3 @@
     <script src="assets/js/main.js"></script>
 </body>
 </html>
-

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -19,6 +19,37 @@
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="stylesheet" href="assets/css/dark-mode.css">
     <link rel="stylesheet" href="assets/css/rtl.css">
+    <style>
+        .gallery-swiper .swiper-slide {
+            display: flex;
+        }
+
+        .gallery-swiper .performer-card {
+            width: 100%;
+        }
+
+        .gallery-swiper .performer-card-body {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+
+        .gallery-swiper .performer-actions {
+            display: grid !important;
+            grid-template-columns: 1fr;
+            gap: 0.75rem !important;
+            margin-top: auto;
+        }
+
+        .gallery-swiper .performer-actions .btn {
+            width: 100%;
+            min-height: 56px;
+            justify-content: center;
+            display: inline-flex;
+            align-items: center;
+            white-space: normal;
+        }
+    </style>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23070707'/%3E%3Cpath d='M14 42L28 18H38L24 42Z' fill='%23f5c542'/%3E%3Crect x='39' y='18' width='11' height='24' rx='2' fill='%23f5c542'/%3E%3C/svg%3E">
 </head>
 <body class="dark-mode">
@@ -89,7 +120,7 @@
                     <!-- Service Card 1 -->
                     <div class="col-md-6 col-lg-3 fade-up">
                         <div class="glass-card h-100 text-center text-lg-start">
-                            <i class="fa-solid fa-fire fs-1 mb-4" style="color: var(--fire-orange);"></i>
+                            <img src="https://images.unsplash.com/photo-1549488344-1f9b8d2bd1f3?w=300&q=80" alt="Fire show performance" class="mb-4" style="width: 84px; height: 84px; object-fit: cover; border-radius: 18px;">
                             <h4 class="mb-3">Fire Shows</h4>
                             <p class="text-muted small mb-4">Heart-stopping fire breathing, spinning, and synchronized choreography.</p>
                             <a href="#" class="text-decoration-none fw-bold mt-auto d-inline-block" style="color: var(--electric-gold);">View Details <i class="fa-solid fa-arrow-right ms-1"></i></a>
@@ -98,7 +129,7 @@
                     <!-- Service Card 2 -->
                     <div class="col-md-6 col-lg-3 fade-up" style="transition-delay: 0.1s;">
                         <div class="glass-card h-100 text-center text-lg-start">
-                            <i class="fa-solid fa-bolt fs-1 mb-4" style="color: var(--led-cyan);"></i>
+                            <img src="https://images.unsplash.com/photo-1542382156909-9ae37b3f56fd?w=300&q=80" alt="LED performer with lights" class="mb-4" style="width: 84px; height: 84px; object-fit: cover; border-radius: 18px;">
                             <h4 class="mb-3">LED Performers</h4>
                             <p class="text-muted small mb-4">Futuristic light shows, pixel poi, and glowing robotic characters.</p>
                             <a href="#" class="text-decoration-none fw-bold mt-auto d-inline-block" style="color: var(--electric-gold);">View Details <i class="fa-solid fa-arrow-right ms-1"></i></a>
@@ -107,7 +138,7 @@
                     <!-- Service Card 3 -->
                     <div class="col-md-6 col-lg-3 fade-up" style="transition-delay: 0.2s;">
                         <div class="glass-card h-100 text-center text-lg-start">
-                            <i class="fa-solid fa-shoe-prints fs-1 mb-4" style="color: var(--neon-purple);"></i>
+                            <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=300&q=80" alt="Stilt walker performance" class="mb-4" style="width: 84px; height: 84px; object-fit: cover; border-radius: 18px;">
                             <h4 class="mb-3">Stilt Walkers</h4>
                             <p class="text-muted small mb-4">Towering interactive characters with custom luxury costumes.</p>
                             <a href="#" class="text-decoration-none fw-bold mt-auto d-inline-block" style="color: var(--electric-gold);">View Details <i class="fa-solid fa-arrow-right ms-1"></i></a>
@@ -116,7 +147,7 @@
                     <!-- Service Card 4 -->
                     <div class="col-md-6 col-lg-3 fade-up" style="transition-delay: 0.3s;">
                         <div class="glass-card h-100 text-center text-lg-start">
-                            <i class="fa-solid fa-star fs-1 mb-4" style="color: var(--electric-gold);"></i>
+                            <img src="https://images.unsplash.com/photo-1508997449629-303059a039c0?w=300&q=80" alt="Circus act performance" class="mb-4" style="width: 84px; height: 84px; object-fit: cover; border-radius: 18px;">
                             <h4 class="mb-3">Circus Acts</h4>
                             <p class="text-muted small mb-4">Acrobats, aerialists, and contortionists bringing Cirque aesthetics.</p>
                             <a href="#" class="text-decoration-none fw-bold mt-auto d-inline-block" style="color: var(--electric-gold);">View Details <i class="fa-solid fa-arrow-right ms-1"></i></a>
@@ -135,46 +166,106 @@
                     </div>
                     <a href="#" class="btn btn-outline-premium d-none d-md-inline-block">View Full Gallery</a>
                 </div>
-                
+
                 <div class="swiper gallery-swiper fade-up pb-5">
                     <div class="swiper-wrapper">
                         <!-- Slide 1 -->
                         <div class="swiper-slide">
-                            <div class="card bg-transparent border-0 position-relative overflow-hidden" style="border-radius: 16px;">
-                                <img src="https://images.unsplash.com/photo-1542382156909-9ae37b3f56fd?w=800&q=80" class="card-img-top object-fit-cover" height="400" alt="LED Robot" style="background-color: #222;">
-                                <div class="position-absolute bottom-0 start-0 w-100 p-4" style="background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);">
-                                    <span class="badge mb-2" style="background: var(--led-cyan); color: #000;">LED Act</span>
-                                    <h4 class="text-white mb-0" style="font-family: var(--font-heading);">Neon Titan</h4>
+                            <div class="glass-card performer-card h-100 p-0 overflow-hidden" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 24px;">
+                                <div class="position-relative">
+                                    <img src="https://images.pexels.com/photos/27053586/pexels-photo-27053586/free-photo-of-people-on-stilts.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" class="w-100 object-fit-cover" height="320" alt="LED performer in glowing costume" style="background-color: #222;">
+                                    <div class="position-absolute top-0 start-0 p-3">
+                                        <span class="badge" style="background: var(--led-cyan); color: #000;">Available for booking</span>
+                                    </div>
+                                </div>
+                                <div class="p-4 performer-card-body">
+                                    <div class="d-flex justify-content-between align-items-start gap-3 mb-3">
+                                        <div>
+                                            <h4 class="text-white mb-1" style="font-family: var(--font-heading);">Neon Titan</h4>
+                                            <p class="text-white-50 small mb-0">LED performer and glow robot specialist</p>
+                                        </div>
+                                        <span class="text-white-50 small text-end">Solo / Duo</span>
+                                    </div>
+                                    <p class="text-white-50 small mb-4">Precision light choreography, futuristic movement, and interactive stage moments designed for product launches, brand shows, and nightlife events.</p>
+                                    <div class="d-flex flex-wrap gap-2 performer-actions">
+                                        <a href="contact.html" class="btn btn-premium btn-sm">Book Neon Titan</a>
+                                        <a href="contact.html" class="btn btn-outline-premium btn-sm">Request Quote</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <!-- Slide 2 -->
                         <div class="swiper-slide">
-                            <div class="card bg-transparent border-0 position-relative overflow-hidden" style="border-radius: 16px;">
-                                <img src="https://images.unsplash.com/photo-1549488344-1f9b8d2bd1f3?w=800&q=80" class="card-img-top object-fit-cover" height="400" alt="Fire Breather" style="background-color: #333;">
-                                <div class="position-absolute bottom-0 start-0 w-100 p-4" style="background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);">
-                                    <span class="badge mb-2" style="background: var(--fire-orange); color: #000;">Fire Show</span>
-                                    <h4 class="text-white mb-0" style="font-family: var(--font-heading);">Inferno Dance</h4>
+                            <div class="glass-card performer-card h-100 p-0 overflow-hidden" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 24px;">
+                                <div class="position-relative">
+                                    <img src="https://thumbs.dreamstime.com/b/fair-tauranga-new-zealand-stilt-walker-striped-clothing-entertains-crowd-display-perfect-balance-september-159150894.jpg" class="w-100 object-fit-cover" height="320" alt="Fire performer in an intense stage act" style="background-color: #333;">
+                                    <div class="position-absolute top-0 start-0 p-3">
+                                        <span class="badge" style="background: var(--fire-orange); color: #000;">Available for booking</span>
+                                    </div>
+                                </div>
+                                <div class="p-4 performer-card-body">
+                                    <div class="d-flex justify-content-between align-items-start gap-3 mb-3">
+                                        <div>
+                                            <h4 class="text-white mb-1" style="font-family: var(--font-heading);">Inferno Dance</h4>
+                                            <p class="text-white-50 small mb-0">Fire artist and choreographed stunt performer</p>
+                                        </div>
+                                        <span class="text-white-50 small text-end">Outdoor / Stage</span>
+                                    </div>
+                                    <p class="text-white-50 small mb-4">High-impact fire breathing, spinning, and synchronized choreography for festivals, private celebrations, and premium opening acts.</p>
+                                    <div class="d-flex flex-wrap gap-2 performer-actions">
+                                        <a href="contact.html" class="btn btn-premium btn-sm">Book Inferno Dance</a>
+                                        <a href="contact.html" class="btn btn-outline-premium btn-sm">Request Quote</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <!-- Slide 3 -->
                         <div class="swiper-slide">
-                            <div class="card bg-transparent border-0 position-relative overflow-hidden" style="border-radius: 16px;">
-                                <img src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=800&q=80" class="card-img-top object-fit-cover" height="400" alt="Stilt Walker" style="background-color: #444;">
-                                <div class="position-absolute bottom-0 start-0 w-100 p-4" style="background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);">
-                                    <span class="badge mb-2" style="background: var(--neon-purple); color: #fff;">Stilts</span>
-                                    <h4 class="text-white mb-0" style="font-family: var(--font-heading);">Mirror Man</h4>
+                            <div class="glass-card performer-card h-100 p-0 overflow-hidden" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 24px;">
+                                <div class="position-relative">
+                                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSdtpnnddE6Zx983Brgwlk7unPWnlgxmH84Mw&s" class="w-100 object-fit-cover" height="320" alt="Stilt walker in a crowd performance" style="background-color: #444;">
+                                    <div class="position-absolute top-0 start-0 p-3">
+                                        <span class="badge" style="background: var(--neon-purple); color: #fff;">Available for booking</span>
+                                    </div>
+                                </div>
+                                <div class="p-4 performer-card-body">
+                                    <div class="d-flex justify-content-between align-items-start gap-3 mb-3">
+                                        <div>
+                                            <h4 class="text-white mb-1" style="font-family: var(--font-heading);">Mirror Man</h4>
+                                            <p class="text-white-50 small mb-0">Stilt walker and interactive parade character</p>
+                                        </div>
+                                        <span class="text-white-50 small text-end">Parade / Welcome</span>
+                                    </div>
+                                    <p class="text-white-50 small mb-4">Towering luxury costumes, crowd interaction, and eye-catching movement that works for grand entrances, festivals, and VIP hosting.</p>
+                                    <div class="d-flex flex-wrap gap-2 performer-actions">
+                                        <a href="contact.html" class="btn btn-premium btn-sm">Book Mirror Man</a>
+                                        <a href="contact.html" class="btn btn-outline-premium btn-sm">Request Quote</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <!-- Slide 4 -->
                         <div class="swiper-slide">
-                            <div class="card bg-transparent border-0 position-relative overflow-hidden" style="border-radius: 16px;">
-                                <img src="https://images.unsplash.com/photo-1508997449629-303059a039c0?w=800&q=80" class="card-img-top object-fit-cover" height="400" alt="Acrobat" style="background-color: #555;">
-                                <div class="position-absolute bottom-0 start-0 w-100 p-4" style="background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);">
-                                    <span class="badge mb-2" style="background: var(--electric-gold); color: #000;">Acrobatics</span>
-                                    <h4 class="text-white mb-0" style="font-family: var(--font-heading);">Aerial Silk</h4>
+                            <div class="glass-card performer-card h-100 p-0 overflow-hidden" style="background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 24px;">
+                                <div class="position-relative">
+                                    <img src="https://dnwp63qf32y8i.cloudfront.net/c336e00caa10064f7116460176b4c8b0314dddb7" class="w-100 object-fit-cover" height="320" alt="Aerial performer in a dramatic routine" style="background-color: #555;">
+                                    <div class="position-absolute top-0 start-0 p-3">
+                                        <span class="badge" style="background: var(--electric-gold); color: #000;">Available for booking</span>
+                                    </div>
+                                </div>
+                                <div class="p-4 performer-card-body">
+                                    <div class="d-flex justify-content-between align-items-start gap-3 mb-3">
+                                        <div>
+                                            <h4 class="text-white mb-1" style="font-family: var(--font-heading);">Aerial Silk</h4>
+                                            <p class="text-white-50 small mb-0">Acrobatics and aerial performance specialist</p>
+                                        </div>
+                                        <span class="text-white-50 small text-end">Indoor / Stage</span>
+                                    </div>
+                                    <p class="text-white-50 small mb-4">Dramatic suspended choreography with elegant transitions, ideal for gala dinners, theater-style events, and luxury brand moments.</p>
+                                    <div class="d-flex flex-wrap gap-2 performer-actions">
+                                        <a href="contact.html" class="btn btn-premium btn-sm">Book Aerial Silk</a>
+                                        <a href="contact.html" class="btn btn-outline-premium btn-sm">Request Quote</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
