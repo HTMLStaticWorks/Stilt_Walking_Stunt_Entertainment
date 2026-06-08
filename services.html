@@ -15,16 +15,18 @@
         }
 
         html[dir="rtl"] .bespoke-align-fix .row {
-            flex-direction: row-reverse !important;
+            flex-direction: row !important;
         }
 
         html[dir="rtl"] .bespoke-align-fix .col-lg-6 {
+            direction: ltr !important;
             text-align: right !important;
         }
 
         html[dir="rtl"] .bespoke-align-fix .list-unstyled li {
-            justify-content: flex-end;
-            flex-direction: row-reverse;
+            direction: ltr !important;
+            justify-content: flex-start !important;
+            flex-direction: row-reverse !important;
         }
 
         html[dir="rtl"] .bespoke-align-fix .list-unstyled i {
@@ -42,6 +44,21 @@
         /* Fix for tablet view alignment to ensure cards are equal height */
         .row.services-grid-row {
             align-items: stretch !important;
+        }
+        
+        /* Workflow section colors */
+        .workflow-circle {
+            background-color: #ffffff;
+        }
+        .workflow-step-num {
+            color: var(--primary-black) !important;
+        }
+        
+        body.dark-mode .workflow-circle {
+            background-color: var(--primary-black) !important;
+        }
+        body.dark-mode .workflow-step-num {
+            color: var(--platinum-white) !important;
         }
     </style>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23070707'/%3E%3Cpath d='M14 42L28 18H38L24 42Z' fill='%23f5c542'/%3E%3Crect x='39' y='18' width='11' height='24' rx='2' fill='%23f5c542'/%3E%3C/svg%3E">
@@ -190,8 +207,8 @@
                     <div class="d-none d-lg-block position-absolute workflow-line" style="top: 40px; left: 10%; right: 10%; height: 2px; background: rgba(0,0,0,0.1); z-index: 1; transform: translateY(-50%);"></div>
                     
                     <div class="col-lg-4 fade-up position-relative z-2">
-                        <div class="bg-white rounded-circle d-flex justify-content-center align-items-center shadow-sm mx-auto mb-4" style="width: 80px; height: 80px; border: 4px solid var(--electric-gold);">
-                            <h3 class="mb-0 fw-bold" style="color: var(--primary-black) !important;">01</h3>
+                        <div class="workflow-circle rounded-circle d-flex justify-content-center align-items-center shadow-sm mx-auto mb-4" style="width: 80px; height: 80px; border: 4px solid var(--electric-gold);">
+                            <h3 class="mb-0 fw-bold workflow-step-num">01</h3>
                         </div>
                         <div class="text-center px-3">
                             <h4 class="mb-3">Discovery</h4>
@@ -200,8 +217,8 @@
                     </div>
                     
                     <div class="col-lg-4 fade-up position-relative z-2" style="transition-delay: 0.1s;">
-                        <div class="bg-white rounded-circle d-flex justify-content-center align-items-center shadow-sm mx-auto mb-4" style="width: 80px; height: 80px; border: 4px solid var(--led-cyan);">
-                            <h3 class="mb-0 fw-bold" style="color: var(--primary-black) !important;">02</h3>
+                        <div class="workflow-circle rounded-circle d-flex justify-content-center align-items-center shadow-sm mx-auto mb-4" style="width: 80px; height: 80px; border: 4px solid var(--led-cyan);">
+                            <h3 class="mb-0 fw-bold workflow-step-num">02</h3>
                         </div>
                         <div class="text-center px-3">
                             <h4 class="mb-3">Casting & Prep</h4>
@@ -210,8 +227,8 @@
                     </div>
                     
                     <div class="col-lg-4 fade-up position-relative z-2" style="transition-delay: 0.2s;">
-                        <div class="bg-white rounded-circle d-flex justify-content-center align-items-center shadow-sm mx-auto mb-4" style="width: 80px; height: 80px; border: 4px solid var(--neon-purple);">
-                            <h3 class="mb-0 fw-bold" style="color: var(--primary-black) !important;">03</h3>
+                        <div class="workflow-circle rounded-circle d-flex justify-content-center align-items-center shadow-sm mx-auto mb-4" style="width: 80px; height: 80px; border: 4px solid var(--neon-purple);">
+                            <h3 class="mb-0 fw-bold workflow-step-num">03</h3>
                         </div>
                         <div class="text-center px-3">
                             <h4 class="mb-3">Showtime</h4>

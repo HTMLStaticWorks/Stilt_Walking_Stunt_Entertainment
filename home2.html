@@ -38,24 +38,17 @@
             }
         }
 
-        html[dir="rtl"] .roving-align-fix .row {
-            flex-direction: row-reverse !important;
-        }
-
-        html[dir="rtl"] .cyberpunk-align-fix .row {
-            flex-direction: row !important;
-        }
-
         html[dir="rtl"] .roving-align-fix .col-lg-6,
         html[dir="rtl"] .cyberpunk-align-fix .col-lg-6 {
             text-align: right !important;
+            direction: ltr;
         }
 
         html[dir="rtl"] .roving-align-fix .list-unstyled li,
         html[dir="rtl"] .cyberpunk-align-fix .list-unstyled li {
             display: flex;
             flex-direction: row-reverse;
-            justify-content: flex-end;
+            justify-content: flex-start;
             align-items: center;
             gap: 0.5rem;
         }
@@ -63,6 +56,13 @@
         html[dir="rtl"] .roving-align-fix .list-unstyled i,
         html[dir="rtl"] .cyberpunk-align-fix .list-unstyled i {
             margin: 0 !important;
+        }
+
+        @media (max-width: 768px) {
+            html[dir="rtl"] .roving-align-fix .list-unstyled li,
+            html[dir="rtl"] .cyberpunk-align-fix .list-unstyled li {
+                justify-content: center !important;
+            }
         }
     </style>
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23070707'/%3E%3Cpath d='M14 42L28 18H38L24 42Z' fill='%23f5c542'/%3E%3Crect x='39' y='18' width='11' height='24' rx='2' fill='%23f5c542'/%3E%3C/svg%3E">
@@ -128,7 +128,7 @@
                 <div class="row align-items-center g-5">
                     <div class="col-lg-6 fade-up">
                         <h2 class="section-title roving-title-fix">Roving Crowd Engagement</h2>
-                        <p class="text-muted mb-4">Our interactive performers don't just stay on stageâ€”they weave through your crowd, providing up-close and unforgettable interactions.</p>
+                        <p class="text-muted mb-4">Our interactive performers don't just stay on stage&mdash;they weave through your crowd, providing up-close and unforgettable interactions.</p>
                         <ul class="list-unstyled mb-4">
                             <li class="mb-3"><i class="fa-solid fa-check text-success me-2"></i> Mirror Men & Crystal Characters</li>
                             <li class="mb-3"><i class="fa-solid fa-check text-success me-2"></i> LED Wing Dancers</li>
@@ -288,7 +288,7 @@
                     <div class="col-lg-8 fade-up">
                         <i class="fa-solid fa-microchip fs-1 mb-4" style="color: var(--led-cyan);"></i>
                         <h2 class="section-title text-white">Programmable Pixel Technology</h2>
-                        <p class="text-white-50 mb-5">Our visual poi and LED staffs aren't just brightâ€”they are fully programmable. We can spin your brand's logo, event name, or custom graphics through thin air, creating an unforgettable branded experience.</p>
+                        <p class="text-white-50 mb-5">Our visual poi and LED staffs aren't just bright&mdash;they are fully programmable. We can spin your brand's logo, event name, or custom graphics through thin air, creating an unforgettable branded experience.</p>
                         <div class="d-inline-block p-1 rounded-pill" style="background: linear-gradient(90deg, var(--led-cyan), var(--neon-purple));">
                             <span class="d-block bg-dark text-white px-4 py-2 rounded-pill fw-bold">100% Custom Visuals</span>
                         </div>

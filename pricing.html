@@ -224,13 +224,19 @@
             
             <style>
                 html[dir="rtl"] .custom-accordion .accordion-button {
-                    flex-direction: row-reverse;
-                    text-align: right;
+                    direction: ltr !important;
+                    flex-direction: row-reverse !important;
+                    text-align: right !important;
                 }
 
                 html[dir="rtl"] .custom-accordion .accordion-button::after {
-                    margin-left: 0;
-                    margin-right: auto;
+                    margin-left: 0 !important;
+                    margin-right: auto !important;
+                }
+
+                html[dir="rtl"] .custom-accordion .accordion-body {
+                    direction: ltr !important;
+                    text-align: right !important;
                 }
 
                 .custom-accordion .accordion-button::after {

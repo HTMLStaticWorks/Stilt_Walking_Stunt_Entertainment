@@ -41,3 +41,7 @@ html[dir="rtl"] .pe-0 {
 html[dir="rtl"] .text-md-start {
   text-align: right !important;
 }
+
+html[dir="rtl"] header {
+  direction: ltr !important;
+}
